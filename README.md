@@ -1,13 +1,11 @@
-# Omakub
 
-Turn a fresh Ubuntu installation into a fully-configured, beautiful, and modern web development system by running a single command. That's the one-line pitch for Omakub. No need to write bespoke configs for every essential tool just to get started or to be up on all the latest command-line tools. Omakub is an opinionated take on what Linux can be at its best.
+## Script to install
 
-Watch the introduction video and read more at [omakub.org](https://omakub.org).
+echo "Installing git..."
+sudo apt-get update > /dev/null
+sudo apt-get install -y git > /dev/null
 
-## Contributing to the documentation
+echo "Cloning stable configuration"
+git clone -b stable https://github.com/mattnics/MacBook_Ubuntu.git ~/.local/share/macbookconfig > /dev/null
 
-Please help us improve Omakub's documentation on the [basecamp/omakub-site repository](https://github.com/basecamp/omakub-site).
-
-## License
-
-Omakub is released under the [MIT License](https://opensource.org/licenses/MIT).
+source ~/.local/share/macbookconfig/install.sh
